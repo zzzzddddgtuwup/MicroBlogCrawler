@@ -1,0 +1,2067 @@
+      
+
+
+
+
+
+
+
+      
+  
+
+<div class="Grid Grid--withGutter" data-component-term="user" role="presentation">
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="138255140" id="stream-item-user-138255140" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="ecsandberg11"
+     data-user-id="138255140"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/ecsandberg11" tabindex="-1" aria-hidden="true" style="
+    background-color: #0A2542;
+    background-image: url(https://pbs.twimg.com/profile_banners/138255140/1402973995/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/ecsandberg11" title="Eric Sandberg, Ph.D." tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/3069291683/ebbcaee71fb6b33ea4994cb0e677a486_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="138255140"
+        data-screen-name="ecsandberg11" data-name="Eric Sandberg, Ph.D." data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @ecsandberg11" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @ecsandberg11</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @ecsandberg11" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @ecsandberg11</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @ecsandberg11</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @ecsandberg11</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @ecsandberg11</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @ecsandberg11</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/ecsandberg11"  data-aria-label-part>
+      Eric Sandberg, Ph.D.
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/ecsandberg11" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">ecsandberg11</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Instructional coach and educator, husband and father, Ph.D., supporter of student and professional learning (face to face, online, and hybrid),  superhero.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="479740024" id="stream-item-user-479740024" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="JaysonGraham1"
+     data-user-id="479740024"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/JaysonGraham1" tabindex="-1" aria-hidden="true" style="
+    background-color: #FA743E;
+    background-image: url(https://pbs.twimg.com/profile_banners/479740024/1418346173/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/JaysonGraham1" title="Jay Graham" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/543209344343740416/6GMNlcMT_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="479740024"
+        data-screen-name="JaysonGraham1" data-name="Jay Graham" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @JaysonGraham1" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @JaysonGraham1</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @JaysonGraham1" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @JaysonGraham1</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @JaysonGraham1</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @JaysonGraham1</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @JaysonGraham1</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @JaysonGraham1</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/JaysonGraham1"  data-aria-label-part>
+      Jay Graham
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/JaysonGraham1" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">JaysonGraham1</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Pleased to meet you, hope you guess my name.  CLE, OH</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="119931008" id="stream-item-user-119931008" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="CowboysFanZone"
+     data-user-id="119931008"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/CowboysFanZone" tabindex="-1" aria-hidden="true" style="
+    background-color: #3B94D9;
+    background-image: url(https://pbs.twimg.com/profile_banners/119931008/1416947346/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/CowboysFanZone" title="DallasCowboysFanZone" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/537028091290202112/s0mad3o__bigger.png" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="119931008"
+        data-screen-name="CowboysFanZone" data-name="DallasCowboysFanZone" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @CowboysFanZone" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @CowboysFanZone</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @CowboysFanZone" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @CowboysFanZone</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @CowboysFanZone</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @CowboysFanZone</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @CowboysFanZone</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @CowboysFanZone</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/CowboysFanZone"  data-aria-label-part>
+      DallasCowboysFanZone
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/CowboysFanZone" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">CowboysFanZone</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>HUGE Cowboys fan here! Tweeting my own thoughts on the Cowboys, and re-tweeting news and notes that I come across. Follow me now if you&#39;re a Cowboys fan!</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="1971602798" id="stream-item-user-1971602798" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="GalushkaHomes"
+     data-user-id="1971602798"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/GalushkaHomes" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/1971602798/1419463139/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/GalushkaHomes" title="Ghome improvements " tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/378800000618236343/ff02e443fc01a6dee0ba60eaa19c9a93_bigger.png" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="1971602798"
+        data-screen-name="GalushkaHomes" data-name="Ghome improvements " data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @GalushkaHomes" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @GalushkaHomes</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @GalushkaHomes" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @GalushkaHomes</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @GalushkaHomes</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @GalushkaHomes</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @GalushkaHomes</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @GalushkaHomes</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/GalushkaHomes"  data-aria-label-part>
+      Ghome improvements 
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/GalushkaHomes" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">GalushkaHomes</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Galushka Home Improvement offers a wide range of services. Anything from kitchen remodeling to exterior needs including roofing, gutters, and windows.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="317339913" id="stream-item-user-317339913" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="oikguarantee"
+     data-user-id="317339913"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/oikguarantee" tabindex="-1" aria-hidden="true" style="
+    background-color: #89C9FA;
+    background-image: url(https://pbs.twimg.com/profile_banners/317339913/1420158617/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/oikguarantee" title="Ashley Rodriguez" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/550811245436092418/duoeEKUl_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="317339913"
+        data-screen-name="oikguarantee" data-name="Ashley Rodriguez" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @oikguarantee" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @oikguarantee</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @oikguarantee" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @oikguarantee</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @oikguarantee</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @oikguarantee</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @oikguarantee</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @oikguarantee</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/oikguarantee"  data-aria-label-part>
+      Ashley Rodriguez
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/oikguarantee" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">oikguarantee</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Amateur pop culture fanatic. Internet maven. Travel enthusiast. Zombie guru. Subtly charming gamer. Creator.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="2209956018" id="stream-item-user-2209956018" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="safymosekom"
+     data-user-id="2209956018"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/safymosekom" tabindex="-1" aria-hidden="true" style="
+    background-color: #FF3300;
+    ">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/safymosekom" title="Horatius Gilmour" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/538588569409830912/6ort9M-w_bigger.png" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="2209956018"
+        data-screen-name="safymosekom" data-name="Horatius Gilmour" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @safymosekom" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @safymosekom</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @safymosekom" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @safymosekom</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @safymosekom</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @safymosekom</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @safymosekom</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @safymosekom</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/safymosekom"  data-aria-label-part>
+      Horatius Gilmour
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/safymosekom" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">safymosekom</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+</div>
+
+
+      
+      
+      
+
+
+
+
+
+
+
+      
+  
+
+<div class="Grid Grid--withGutter" data-component-term="user" role="presentation">
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="788355817" id="stream-item-user-788355817" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="ShermansOffice"
+     data-user-id="788355817"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/ShermansOffice" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/788355817/1354378139/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/ShermansOffice" title="Mr. Burre" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/2555732308/1jevwbmzeh80hl2ryyio_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="788355817"
+        data-screen-name="ShermansOffice" data-name="Mr. Burre" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @ShermansOffice" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @ShermansOffice</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @ShermansOffice" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @ShermansOffice</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @ShermansOffice</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @ShermansOffice</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @ShermansOffice</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @ShermansOffice</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/ShermansOffice"  data-aria-label-part>
+      Mr. Burre
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/ShermansOffice" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">ShermansOffice</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="97924932" id="stream-item-user-97924932" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="Markusorilious"
+     data-user-id="97924932"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/Markusorilious" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/97924932/1414956495/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/Markusorilious" title="Mark Cloete" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/463407243288150016/beb-YKb4_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="97924932"
+        data-screen-name="Markusorilious" data-name="Mark Cloete" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @Markusorilious" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @Markusorilious</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @Markusorilious" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @Markusorilious</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @Markusorilious</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @Markusorilious</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @Markusorilious</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @Markusorilious</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/Markusorilious"  data-aria-label-part>
+      Mark Cloete
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/Markusorilious" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">Markusorilious</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Musician. Outdoorsman. Hiker. Mtbiker. Travel lover. Car nut. Belief in the power of good education &amp; leadership. Stories from my life.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="310866674" id="stream-item-user-310866674" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="AlexisMilesky"
+     data-user-id="310866674"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/AlexisMilesky" tabindex="-1" aria-hidden="true" style="
+    background-color: #000DFF;
+    background-image: url(https://pbs.twimg.com/profile_banners/310866674/1382656410/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/AlexisMilesky" title="Alexis Milesky" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/538766458608951298/zYBJRsWL_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="310866674"
+        data-screen-name="AlexisMilesky" data-name="Alexis Milesky" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @AlexisMilesky" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @AlexisMilesky</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @AlexisMilesky" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @AlexisMilesky</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @AlexisMilesky</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @AlexisMilesky</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @AlexisMilesky</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @AlexisMilesky</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/AlexisMilesky"  data-aria-label-part>
+      Alexis Milesky
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/AlexisMilesky" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">AlexisMilesky</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>OHIO SOCCER <img class="twitter-emoji" src="https://abs.twimg.com/emoji/v1/72x72/26bd.png" draggable="false" alt="⚽" title="Soccer ball" aria-label="Emoji: Soccer ball"> Trust in the LORD with all your heart, and do not lean on your own understanding. -Proverbs 3:5</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="18654092" id="stream-item-user-18654092" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="cbeyerle"
+     data-user-id="18654092"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/cbeyerle" tabindex="-1" aria-hidden="true" style="
+    background-color: #ABB8C2;
+    background-image: url(https://pbs.twimg.com/profile_banners/18654092/1407516039/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/cbeyerle" title="cbeyerle" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/488782988046368768/xxXW_G3G_bigger.png" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="18654092"
+        data-screen-name="cbeyerle" data-name="cbeyerle" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @cbeyerle" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @cbeyerle</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @cbeyerle" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @cbeyerle</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @cbeyerle</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @cbeyerle</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @cbeyerle</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @cbeyerle</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/cbeyerle"  data-aria-label-part>
+      cbeyerle
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/cbeyerle" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">cbeyerle</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Learner. New Tech District Extension Coach, Former H.S. Math &amp; PLTW Educator. Parent. Tech Enthusiast. <a href="/hashtag/PBL?src=hash" data-query-source="hashtag_click" class="twitter-hashtag pretty-link js-nav" dir="ltr" ><s>#</s><b>PBL</b></a></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="2221038338" id="stream-item-user-2221038338" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="ttmilesky"
+     data-user-id="2221038338"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/ttmilesky" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    ">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/ttmilesky" title="Tammy Milesky" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/520030616184946688/J8F4ilcK_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="2221038338"
+        data-screen-name="ttmilesky" data-name="Tammy Milesky" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @ttmilesky" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @ttmilesky</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @ttmilesky" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @ttmilesky</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @ttmilesky</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @ttmilesky</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @ttmilesky</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @ttmilesky</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/ttmilesky"  data-aria-label-part>
+      Tammy Milesky
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/ttmilesky" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">ttmilesky</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="93465920" id="stream-item-user-93465920" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="Ryan_L_McCoy"
+     data-user-id="93465920"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/Ryan_L_McCoy" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/93465920/1406889719/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/Ryan_L_McCoy" title="Ryan McCoy" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/504643416144498688/bGaHuasg_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="93465920"
+        data-screen-name="Ryan_L_McCoy" data-name="Ryan McCoy" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @Ryan_L_McCoy" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @Ryan_L_McCoy</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @Ryan_L_McCoy" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @Ryan_L_McCoy</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @Ryan_L_McCoy</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @Ryan_L_McCoy</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @Ryan_L_McCoy</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @Ryan_L_McCoy</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/Ryan_L_McCoy"  data-aria-label-part>
+      Ryan McCoy
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/Ryan_L_McCoy" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">Ryan_L_McCoy</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Christian, husband, father, elementary assistant principal, and current Doctoral student! Lover of God, family, youth and University of Louisville sports.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+</div>
+
+
+      
+      
+      
+
+
+
+
+
+
+
+      
+  
+
+<div class="Grid Grid--withGutter" data-component-term="user" role="presentation">
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="483766139" id="stream-item-user-483766139" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="Tyisha_Rochelle"
+     data-user-id="483766139"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/Tyisha_Rochelle" tabindex="-1" aria-hidden="true" style="
+    background-color: #038543;
+    background-image: url(https://pbs.twimg.com/profile_banners/483766139/1392664786/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/Tyisha_Rochelle" title="Tyisha Rochelle " tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/551463878023192576/7TkOGk3D_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="483766139"
+        data-screen-name="Tyisha_Rochelle" data-name="Tyisha Rochelle " data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @Tyisha_Rochelle" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @Tyisha_Rochelle</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @Tyisha_Rochelle" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @Tyisha_Rochelle</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @Tyisha_Rochelle</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @Tyisha_Rochelle</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @Tyisha_Rochelle</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @Tyisha_Rochelle</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/Tyisha_Rochelle"  data-aria-label-part>
+      Tyisha Rochelle 
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/Tyisha_Rochelle" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">Tyisha_Rochelle</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>When there is no enemy within , the enemy outside cannot hurt you. Food&amp;positivity is all I ever really tweet about.  &#10;<a href="/hashtag/Writer?src=hash" data-query-source="hashtag_click" class="twitter-hashtag pretty-link js-nav" dir="ltr" ><s>#</s><b>Writer</b></a>/Journalist / optimist <a href="/hashtag/HighOnLife?src=hash" data-query-source="hashtag_click" class="twitter-hashtag pretty-link js-nav" dir="ltr" ><s>#</s><b>HighOnLife</b></a></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="340713839" id="stream-item-user-340713839" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="erinsullivan16"
+     data-user-id="340713839"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/erinsullivan16" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/340713839/1420776550/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/erinsullivan16" title="erin sullivan" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/1574633618/Screen_shot_2011-04-02_at_9.17.14_AM_bigger.jpg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="340713839"
+        data-screen-name="erinsullivan16" data-name="erin sullivan" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @erinsullivan16" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @erinsullivan16</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @erinsullivan16" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @erinsullivan16</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @erinsullivan16</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @erinsullivan16</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @erinsullivan16</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @erinsullivan16</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/erinsullivan16"  data-aria-label-part>
+      erin sullivan
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/erinsullivan16" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">erinsullivan16</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Teacher, Gifted Coordinator, innovative education enthusiast, iPads, 1:1, and flipped learning advocate.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="41708167" id="stream-item-user-41708167" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="LOSCABOSTOURISM"
+     data-user-id="41708167"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/LOSCABOSTOURISM" tabindex="-1" aria-hidden="true" style="
+    background-color: #E8BD51;
+    background-image: url(https://pbs.twimg.com/profile_banners/41708167/1415388724/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/LOSCABOSTOURISM" title="Los Cabos" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/530762046107688961/p9Wyd9m1_bigger.png" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="41708167"
+        data-screen-name="LOSCABOSTOURISM" data-name="Los Cabos" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @LOSCABOSTOURISM" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @LOSCABOSTOURISM</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @LOSCABOSTOURISM" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @LOSCABOSTOURISM</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @LOSCABOSTOURISM</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @LOSCABOSTOURISM</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @LOSCABOSTOURISM</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @LOSCABOSTOURISM</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/LOSCABOSTOURISM"  data-aria-label-part>
+      Los Cabos
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/LOSCABOSTOURISM" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">LOSCABOSTOURISM</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Located at the tip of the Baja Peninsula, Los Cabos is home to award-winning hotels, golf courses, spas &amp; more. Official Twitter of Los Cabos Tourism Board.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="2802453537" id="stream-item-user-2802453537" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="DPerkins2015"
+     data-user-id="2802453537"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/DPerkins2015" tabindex="-1" aria-hidden="true" style="
+    background-color: #3B94D9;
+    background-image: url(https://pbs.twimg.com/profile_banners/2802453537/1412608295/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/DPerkins2015" title="Dot Perkins" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/519139721281155074/w7Ykdb6C_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="2802453537"
+        data-screen-name="DPerkins2015" data-name="Dot Perkins" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @DPerkins2015" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @DPerkins2015</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @DPerkins2015" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @DPerkins2015</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @DPerkins2015</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @DPerkins2015</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @DPerkins2015</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @DPerkins2015</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/DPerkins2015"  data-aria-label-part>
+      Dot Perkins
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/DPerkins2015" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">DPerkins2015</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>CEO</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="1117949496" id="stream-item-user-1117949496" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="hraddington"
+     data-user-id="1117949496"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/hraddington" tabindex="-1" aria-hidden="true" style="
+    background-color: #93A644;
+    ">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/hraddington" title="Heather Addington" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/3327943260/38d79bb21b2a398c01594d4451828f79_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="1117949496"
+        data-screen-name="hraddington" data-name="Heather Addington" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @hraddington" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @hraddington</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @hraddington" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @hraddington</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @hraddington</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @hraddington</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @hraddington</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @hraddington</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/hraddington"  data-aria-label-part>
+      Heather Addington
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/hraddington" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">hraddington</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>Reader of many books, 5th grade teacher/Intervention Specialist, golfer and barre enthusiast, Originally from St. Henry, Teacher in Columbus, OH</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+  <div class="Grid-cell
+      u-size1of2 u-lg-size1of3
+    u-mb10" data-test-selector="ProfileTimelineUser" role="presentation">
+    <div class="js-stream-item" role="listitem" data-item-id="2344211519" id="stream-item-user-2344211519" data-item-type="user">
+    <div class="ProfileCard js-actionable-user"
+     data-screen-name="Explore_paleo"
+     data-user-id="2344211519"
+     data-feedback-token=""
+     data-impression-id=""
+     
+  >
+  <a class="ProfileCard-bg js-nav" href="/Explore_paleo" tabindex="-1" aria-hidden="true" style="
+    background-color: #0084B4;
+    background-image: url(https://pbs.twimg.com/profile_banners/2344211519/1397249826/600x200);">
+  </a>
+
+  <div class="ProfileCard-content">
+    <a class="ProfileCard-avatarLink js-nav js-tooltip" href="/Explore_paleo" title="Aaron Andrew Alford" tabindex="-1" aria-hidden="true" >
+      <img class="ProfileCard-avatarImage js-action-profile-avatar" src="https://pbs.twimg.com/profile_images/521027616631828480/OfmkE8gD_bigger.jpeg" alt="">
+    </a>
+
+    <div class="ProfileCard-actions">
+      <div class="ProfileCard-userActions with-rightCaret js-userActions">
+        <div class="UserActions   UserActions--small u-textLeft" >
+    <div class="user-actions btn-group not-following not-muting " data-user-id="2344211519"
+        data-screen-name="Explore_paleo" data-name="Aaron Andrew Alford" data-protected="false">
+      <span class="UserActions-moreActions u-inlineBlock">
+          <button type="button" class="js-tooltip unmute-button btn small plain-btn" title="Unmute @Explore_paleo" data-placement="top">
+            <span class="Icon Icon--muted Icon--medium"><span class="visuallyhidden">Unmute @Explore_paleo</span></span>
+          </button><button type="button" class="first-load js-tooltip mute-button btn small plain-btn" title="Mute @Explore_paleo" data-placement="top">
+            <span class="Icon Icon--unmuted Icon--medium"><span class="visuallyhidden">Mute @Explore_paleo</span></span>
+          </button>
+<div class="dropdown ">
+  <button type="button" class="user-dropdown dropdown-toggle js-dropdown-toggle js-link js-tooltip btn plain-btn small-user-dropdown" title="More user actions">
+    <span class="user-dropdown-icon Icon Icon--cog Icon--small"><span class="visuallyhidden">User Actions</span></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="dropdown-caret">
+      <span class="caret-outer"></span>
+      <span class="caret-inner"></span>
+    </div>
+    <ul>
+      <li class="mention-text pretty-link not-blocked"><button type="button" class="dropdown-link">Tweet to @Explore_paleo</button></li>
+      <li class="dm-text"><button type="button" class="dropdown-link">Send a Direct Message</button></li>
+      <li class="list-text pretty-link not-blocked"><button type="button" class="dropdown-link">Add or remove from lists&hellip;</button></li>
+      <li class="dropdown-divider not-blocked"></li>
+        <li class="mute-user-item pretty-link"><button type="button" class="dropdown-link">Mute @Explore_paleo</button></li>
+  <li class="unmute-user-item pretty-link"><button type="button" class="dropdown-link">Unmute @Explore_paleo</button></li>
+
+      <li class="block-or-report-text pretty-link not-blocked"><button type="button" class="dropdown-link">Block or report</button></li>
+      <li class="unblock-text pretty-link"><button type="button" class="dropdown-link">Unblock @Explore_paleo</button></li>
+      <li class="report-text pretty-link"><button type="button" class="dropdown-link">Report</button></li>
+      <li class="hide-suggestion-text"><button type="button" class="dropdown-link">Hide this suggestion</button></li>
+      <li class="dropdown-divider is-following"></li>
+      <li class="retweet-on-text"><button type="button" class="dropdown-link">Turn on Retweets</button></li>
+      <li class="retweet-off-text"><button type="button" class="dropdown-link">Turn off Retweets</button></li>
+      <li class="device-notifications-on-text"><button type="button" class="dropdown-link">Turn on mobile notifications</button></li>
+      <li class="device-notifications-off-text"><button type="button" class="dropdown-link">Turn off mobile notifications</button></li>
+      <li class="dropdown-divider is-embeddable"></li>
+      <li class="embed-profile"><button type="button" class="dropdown-link">Embed this Profile</button></li>
+    </ul>
+  </div>
+</div>
+
+      </span><button class="user-actions-follow-button js-follow-btn follow-button btn small small-follow-btn" type="button">
+  <span class="button-text follow-text">
+     <span class="Icon Icon--follow"></span> Follow 
+    
+  </span>
+  <span class="button-text following-text">
+     Following
+    
+  </span>
+  <span class="button-text unfollow-text">
+     Unfollow
+    
+  </span>
+  <span class="button-text blocked-text">Blocked</span>
+  <span class="button-text unblock-text">Unblock</span>
+  <span class="button-text pending-text">Pending</span>
+  <span class="button-text cancel-text">Cancel</span>
+</button>
+
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="ProfileCard-userFields">
+      <div class="ProfileNameTruncated">
+  <div class="u-textTruncate u-inlineBlock">
+    <a class="ProfileNameTruncated-link u-textInheritColor js-nav js-action-profile-name" href="/Explore_paleo"  data-aria-label-part>
+      Aaron Andrew Alford
+    </a>
+  </div>
+</div>
+      <div class="ProfileCard-screenname u-dir" dir="ltr">
+        <a href="/Explore_paleo" class="ProfileCard-screennameLink u-linkComplex js-nav" data-aria-label-part >
+          @<span class="u-linkComplex-target">Explore_paleo</span>
+        </a>
+      </div>
+      <p class="ProfileCard-bio u-dir js-ellipsis"
+        
+        dir="ltr" data-aria-label-part>SharkFinder co-founder, Paleo Quest co-founder, Underwater explorer, pro-am paleontologist, researcher, writer, psychiatric epidemiologist, STEM mentor, human</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+</div>
+
+
+      
+      
