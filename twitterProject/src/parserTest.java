@@ -18,6 +18,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.neo4j.graphdb.Node;
+import org.neo4j.graphdb.Transaction;
 
 public class parserTest {
 	private List<String> cookies;
@@ -25,7 +27,9 @@ public class parserTest {
 
 	private final String USER_AGENT = "Mozilla/5.0";
 	private static final String USER_NAME = "zzzzddddgtuwup@gmail.com";
+	private static final String USER_SCREEN_NAME_STRING = "zzzzddddgtuwup";
 	private static final String PASS_WORD = "ggggddddzzzz1234";
+	private String authenticity_tokenString;
 
 	public List<String> getCookies() {
 		return cookies;
@@ -56,8 +60,6 @@ public class parserTest {
 		// System.out.println("Extracting form's data...");
 
 		Document doc = Jsoup.parse(html);
-
-		// Google form id
 		Elements loginform = doc.getElementsByClass("js-signin");
 		Elements inputElements = loginform.get(0).getElementsByTag("input");
 		Map<String, String> map = new HashMap<String, String>();
@@ -72,6 +74,7 @@ public class parserTest {
 			map.put(URLEncoder.encode(key, "UTF-8"),
 					URLEncoder.encode(value, "UTF-8"));
 		}
+		this.authenticity_tokenString = map.get("authenticity_token");
 		// build parameters list
 		StringBuilder result = new StringBuilder();
 		result.append("session%5Busername_or_email%5D=")
@@ -85,7 +88,6 @@ public class parserTest {
 				.append(map.get("redirect_after_login")).append('&')
 				.append("authenticity_token=")
 				.append(map.get("authenticity_token"));
-
 		return result.toString();
 	}
 
@@ -168,12 +170,15 @@ public class parserTest {
 		wr.flush();
 		wr.close();
 
-		int responseCode = conn.getResponseCode();
 		// System.out.println("header is "+ conn.getHeaderFields());
-		System.out.println("\nSending 'POST' request to URL : " + url);
-		System.out.println("Post parameters : " + postParams);
-		System.out.println("Response Code : " + responseCode);
-		System.out.println("==============================");
+
+		int responseCode = conn.getResponseCode();
+		if (responseCode != 200)
+			return null;
+		// System.out.println("\nSending 'POST' request to URL : " + url);
+		// System.out.println("Post parameters : " + postParams);
+		// System.out.println("Response Code : " + responseCode);
+		// System.out.println("==============================");
 
 		BufferedReader in = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
@@ -219,6 +224,7 @@ public class parserTest {
 		return getFollowersFromHtml(html);
 	}
 
+	@Deprecated
 	public List<String> getFollowersFromHtml(String html) {
 		Document doc = Jsoup.parse(html);
 		Elements timeline = doc.getElementsByClass("GridTimeline");
@@ -232,12 +238,16 @@ public class parserTest {
 		return resultList;
 	}
 
-	public List<String> getFollowersFromJsonHtml(String html) {
+	public List<TwitterUser> getUserInfoFromJsonHtml(String html) {
 		Document doc = Jsoup.parse(html);
 		Elements screenNames = doc.getElementsByClass("ProfileCard");
-		List<String> resultList = new ArrayList<>();
+		List<TwitterUser> resultList = new ArrayList<>();
 		for (Element e : screenNames) {
-			resultList.add(e.attr("data-screen-name"));
+			// if the twitter is not protected
+			if (e.getElementsByClass("ProfileNameTruncated-badges").size() == 0) {
+				resultList.add(new TwitterUser(e.attr("data-screen-name"), e
+						.attr("data-user-id")));
+			}
 		}
 		return resultList;
 	}
@@ -262,10 +272,15 @@ public class parserTest {
 				conn.addRequestProperty("Cookie", cookie.split(";", 1)[0]);
 			}
 		}
-//		int responseCode = conn.getResponseCode();
-//		System.out.println("\nSending ajax request to URL : " + url);
-//		System.out.println("Response Code : " + responseCode);
-//		System.out.println("==============================");
+		int responseCode = conn.getResponseCode();
+		if (responseCode != 200){
+			System.out.println(responseCode);
+			return null;
+		}
+			
+		// System.out.println("\nSending ajax request to URL : " + url);
+		// System.out.println("Response Code : " + responseCode);
+		// System.out.println("==============================");
 		BufferedReader in = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
 		String inputLine;
@@ -280,51 +295,171 @@ public class parserTest {
 		setCookies(conn.getHeaderFields().get("set-cookie"));
 		return response.toString();
 	}
-	
-	public List<String> getFollowers(String currentUser) throws Exception {
-		return twitterAjaxDBInterface(currentUser, "followers");
-	}
-	
-	public List<String> getFollowing(String currentUser) throws Exception{
-		return twitterAjaxDBInterface(currentUser, "following");
-	}
-	
-	public List<String> twitterAjaxDBInterface(String currentUser, String instruction) throws Exception {
-		String cursor = "-1";
-		boolean hasMoreItems = true;
-		List<String> result = new ArrayList<>();
 
-		while (hasMoreItems) {
-			String url = "https://twitter.com/"
-					+ currentUser
-					+ "/"+instruction+"/users?cursor="
-					+ cursor
-					+ "&cursor_index=&cursor_offset=&include_available_features=1&include_entities=1&is_forward=true";
-			String response = sendAjaxRequest(url);
-			if (testGetJson(response)) {
-				JSONObject jsonObject = new JSONObject(response);		
-				String html = jsonObject.getString("items_html");
-				cursor = jsonObject.getString("cursor");
-				hasMoreItems = jsonObject.getBoolean("has_more_items");
-				result.addAll(getFollowersFromJsonHtml(html));
-			} else {
-				login();
-			}
+	public List<TwitterUser> getFollowers(String currentUser) throws Exception {
+		String cursor = "-1";
+		List<TwitterUser> result = new ArrayList<>();
+		while (!cursor.equals("0")) {
+			List<TwitterUser> tmpList = new ArrayList<>();
+			cursor = twitterAjaxDBInterface(currentUser, "followers", cursor,
+					tmpList);
+			result.addAll(tmpList);
 		}
 		return result;
 	}
 
+	public List<TwitterUser> getFollowing(String currentUser) throws Exception {
+		String cursor = "-1";
+		List<TwitterUser> result = new ArrayList<>();
+		while (!cursor.equals("0")) {
+			List<TwitterUser> tmpList = new ArrayList<>();
+			cursor = twitterAjaxDBInterface(currentUser, "following", cursor,
+					tmpList);
+			result.addAll(tmpList);
+		}
+		return result;
+	}
+
+	public void addUsersUnderOrg(String currentUser, EmbeddedNeo4j db)
+			throws Exception {
+		String cursor = "-1";
+		int count = 0;
+		while (!cursor.equals("0")) {
+			count++;
+			if (count % 30 == 0)
+				System.out.println(count*18);
+			List<TwitterUser> tmpList = new ArrayList<>();
+			cursor = twitterAjaxDBInterface(currentUser, "followers", cursor,
+					tmpList);
+			if (!tmpList.isEmpty()) {
+				try (Transaction tx = db.graphDb.beginTx()) {
+					for (TwitterUser u : tmpList) {
+						Node tmp = db.graphDb.createNode();
+						tmp.setProperty("name", u.name);
+						tmp.setProperty("id", u.userId);
+					}
+					tx.success();
+				}
+			}
+		}
+	}
+
+	public void destroyAllFollowingForDeveloper() throws Exception {
+		String cursor = "-1";
+		while (!cursor.equals("0")) {
+			List<TwitterUser> tmpList = new ArrayList<>();
+			cursor = twitterAjaxDBInterface(USER_SCREEN_NAME_STRING,
+					"following", cursor, tmpList);
+			if (!tmpList.isEmpty()) {
+				for (TwitterUser u : tmpList) {
+					unFollowOneUserUnderOrg(u.userId);
+				}
+			}
+		}
+	}
+
+	/*
+	 * get followers/following under currentUser. 18 one time
+	 */
+	public String twitterAjaxDBInterface(String currentUser,
+			String instruction, String cursor, List<TwitterUser> list)
+			throws Exception {
+
+		String url = "https://twitter.com/"
+				+ currentUser
+				+ "/"
+				+ instruction
+				+ "/users?cursor="
+				+ cursor
+				+ "&cursor_index=&cursor_offset=&include_available_features=1&include_entities=1&is_forward=true";
+		String response = sendAjaxRequest(url);
+		// System.out.println(response);
+		if(response==null){
+			System.out.println(url);
+			return cursor;
+		}
+		if (testGetJson(response)) {
+			JSONObject jsonObject = new JSONObject(response);
+			String html = jsonObject.getString("items_html");
+			// System.out.println(html);
+			cursor = jsonObject.getString("cursor");
+			List<TwitterUser> userList = getUserInfoFromJsonHtml(html);
+			list.addAll(userList);
+		} else {
+			login();
+		}
+		return cursor;
+	}
+
+	/*
+	 * follow one user under one group. So that I can reduce the times to build
+	 * the graph. I only need to consider the common followers
+	 */
+	public boolean followOneUserUnderOrg(String userId, String currentUser)
+			throws Exception {
+		String paramListString = "authenticity_token="
+				+ authenticity_tokenString + "&challenges_passed=false"
+				+ "&handles_challenges=1" + "&impression_id="
+				+ "&inject_tweet=false" + "&user_id=" + userId;
+		String url = "https://twitter.com/i/user/follow";
+		String referer = "https://twitter.com/" + currentUser + "/followers";
+		String response = sendPost(url, paramListString, referer);
+		if (response == null) {
+			return false;
+		}
+		JSONObject jsonObject = new JSONObject(response);
+		return jsonObject.getString("new_state").equals("following");
+	}
+
+	public void unFollowOneUserUnderOrg(String userId) throws Exception {
+		String paramListString = "authenticity_token="
+				+ authenticity_tokenString + "&challenges_passed=false"
+				+ "&handles_challenges=1" + "&impression_id="
+				+ "&inject_tweet=false" + "&user_id=" + userId;
+		String url = "https://twitter.com/i/user/unfollow";
+		String referer = "https://twitter.com/following";
+		sendPost(url, paramListString, referer);
+	}
+	
+	public int getFollowingNum(String user) throws Exception{
+		String url = "https://twitter.com/" + user;
+		String html = GetPageContent(url);
+		Document doc = Jsoup.parse(html);
+		Elements followingTitle = doc.getElementsByClass("ProfileNav-item--following");
+		if(followingTitle.size()==0){
+			return 0;
+		}else{
+			Elements num = followingTitle.get(0).getElementsByClass("ProfileNav-value");
+			return Integer.parseInt(num.get(0).ownText());
+		}
+	}
+	
 	public static void main(String[] args) throws Exception {
 		parserTest test = new parserTest();
+
+//		EmbeddedNeo4j db = new EmbeddedNeo4j();
+//		db.cleanDb();
+//		db.createDb();
+
 		CookieHandler.setDefault(new CookieManager());
+		System.out.println(test.getFollowingNum("KingMalajua"));
 //		long start = System.currentTimeMillis();
-		List<String> followersList = test.getFollowers("BobbyMooreBFK");
+		// List<TwitterUser> followersList =
+		// test.getFollowers("OhioStAthletics");
+
+		// System.out.println(followersList.size());
+		// System.out.println(followersList);
+
+		// List<TwitterUser> followingList =
+		// test.getFollowing("OhioStAthletics");
+		// System.out.println(followingList.size());
+		// System.out.println(followingList);
+
+//		test.addUsersUnderOrg("ohiounion", db);
+		// test.destroyAllFollowingForDeveloper();
 //		long end = System.currentTimeMillis();
-		System.out.println(followersList.size());
-		System.out.println(followersList);
-		
-		List<String> followingList = test.getFollowing("BobbyMooreBFK");
-		System.out.println(followingList.size());
-//		System.out.println(end-start);
+//		System.out.println((end - start)/1000 + "s");
+
+//		db.shutDown();
 	}
 }
