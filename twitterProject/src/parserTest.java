@@ -8,6 +8,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -18,8 +19,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.neo4j.cypher.javacompat.ExecutionEngine;
+import org.neo4j.cypher.javacompat.ExecutionResult;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.Transaction;
+import org.neo4j.helpers.collection.IteratorUtil;
 
 public class parserTest {
 	private List<String> cookies;
@@ -92,7 +96,7 @@ public class parserTest {
 	}
 
 	private String GetPageContent(String url) throws Exception {
-
+		long start = System.currentTimeMillis();
 		URL obj = new URL(url);
 		conn = (HttpsURLConnection) obj.openConnection();
 
@@ -111,13 +115,11 @@ public class parserTest {
 				// System.out.println("cookie is " + cookie.split(";", 1)[0]);
 				conn.addRequestProperty("Cookie", cookie.split(";", 1)[0]);
 			}
-		} else {
-			// System.out.println("cookie is empty");
 		}
-		int responseCode = conn.getResponseCode();
-		System.out.println("\nSending 'GET' request to URL : " + url);
-		System.out.println("Response Code : " + responseCode);
-		System.out.println("==============================");
+//		int responseCode = conn.getResponseCode();
+//		System.out.println("\nSending 'GET' request to URL : " + url);
+//		System.out.println("Response Code : " + responseCode);
+//		System.out.println("==============================");
 		BufferedReader in = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
 		String inputLine;
@@ -421,28 +423,51 @@ public class parserTest {
 		sendPost(url, paramListString, referer);
 	}
 	
-	public int getFollowingNum(String user) throws Exception{
+	public int getFollowersNum(String user) throws Exception{
 		String url = "https://twitter.com/" + user;
+		long start = System.currentTimeMillis();
 		String html = GetPageContent(url);
+		long end = System.currentTimeMillis();
+		System.out.println("network " + (end - start) + "ms");
 		Document doc = Jsoup.parse(html);
-		Elements followingTitle = doc.getElementsByClass("ProfileNav-item--following");
+		Elements followingTitle = doc.getElementsByClass("ProfileNav-item--followers");
 		if(followingTitle.size()==0){
 			return 0;
 		}else{
 			Elements num = followingTitle.get(0).getElementsByClass("ProfileNav-value");
-			return Integer.parseInt(num.get(0).ownText());
+			return Integer.parseInt(num.get(0).ownText().replace(",", ""));
 		}
 	}
 	
+	public void getRelationships(EmbeddedNeo4j db) throws Exception{
+		ExecutionEngine engine = new ExecutionEngine(db.graphDb);
+		ExecutionResult result;
+		int total = 0;
+		login();
+		System.out.println("login done");
+		try (Transaction tx = db.graphDb.beginTx()) {
+			result = engine.execute("match n return n.name");
+			Iterator<String> name_col = result.columnAs("n.name");
+			for(String name:IteratorUtil.asIterable(name_col)){
+				int follower_num = getFollowersNum(name);
+				total+=follower_num;
+				System.out.println(name +" has "+follower_num+" followers");
+				if (follower_num>2000) {
+					System.out.println("=====================");
+				}
+			}
+		}
+		System.out.println("total followers are "+total);
+	}
 	public static void main(String[] args) throws Exception {
 		parserTest test = new parserTest();
 
-//		EmbeddedNeo4j db = new EmbeddedNeo4j();
+		EmbeddedNeo4j db = new EmbeddedNeo4j();
+		
 //		db.cleanDb();
-//		db.createDb();
-
+		db.createDb();
+		test.getRelationships(db);
 		CookieHandler.setDefault(new CookieManager());
-		System.out.println(test.getFollowingNum("KingMalajua"));
 //		long start = System.currentTimeMillis();
 		// List<TwitterUser> followersList =
 		// test.getFollowers("OhioStAthletics");
@@ -460,6 +485,6 @@ public class parserTest {
 //		long end = System.currentTimeMillis();
 //		System.out.println((end - start)/1000 + "s");
 
-//		db.shutDown();
+		db.shutDown();
 	}
 }
