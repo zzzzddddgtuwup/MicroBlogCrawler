@@ -1,3 +1,5 @@
+SinaMaven/neo4j-*
+
 /build
 #built application files
 *.apk

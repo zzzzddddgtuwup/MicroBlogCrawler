@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://neo4j-contrib.github.io/developer-resources/language-guides/assets/css/main.css">
-    <title>Neo4j Movies</title>
+    <title>Weibo Analysis</title>
 </head>
 
 <body>
@@ -11,18 +11,6 @@
 <div role="navigation" class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-6">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <form role="search" class="navbar-form" id="search">
-                            <div class="form-group">
-                                <input type="text" value="Matrix" placeholder="Search for Movie Title" class="form-control" name="search">
-                            </div>
-                            <button class="btn btn-default" type="submit">Search</button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
             <div class="navbar-header col-sm-6 col-md-6">
                 <div class="logo-well">
                     <a href="http://neo4j.com/developer-resources">
@@ -30,46 +18,13 @@
                     </a>
                 </div>
                 <div class="navbar-brand">
-                    <div class="brand">Neo4j Movies</div>
+                    <div class="brand">Retweet network</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-5">
-        <div class="panel panel-default">
-            <div class="panel-heading">Search Results</div>
-            <table id="results" class="table table-striped table-hover">
-                <thead>
-                <tr>
-                    <th>Movie</th>
-                    <th>Released</th>
-                    <th>Tagline</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="col-md-7">
-        <div class="panel panel-default">
-            <div class="panel-heading" id="title">Details</div>
-            <div class="row">
-                <div class="col-sm-4 col-md-4">
-                    <img src="" class="well" id="poster"/>
-                </div>
-                <div class="col-md-8 col-sm-8">
-                    <h4>Crew</h4>
-                    <ul id="crew">
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <style type="text/css">
     /*.node { stroke: #222; stroke-width: 1.5px; }*/
     /*.node.actor { fill: #888; }
@@ -113,7 +68,7 @@
     .header("Content-Type", "application/json")
     .header("Accept","application/json; charset=UTF-8")
     .post(
-        JSON.stringify({"statements":[{"statement":"MATCH path = (n)-[r]->(m) RETURN path","resultDataContents":["graph"]}]}),
+        JSON.stringify({"statements":[{"statement":"MATCH path = (n)-[r{tweetId:"3812215948115720"}]->(m) RETURN path","resultDataContents":["graph"]}]}),
         function(error, data){
             // if (error) return;
             var res = JSON.parse(data.response);
