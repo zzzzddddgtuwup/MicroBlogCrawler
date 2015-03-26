@@ -3,25 +3,54 @@ package m.sina;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.net.ssl.HttpsURLConnection;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by zzzzddddgtuwup on 3/4/15.
  */
 public class HtmlUtils {
-    private static final String USER_NAME = "derekzhang4484@gmail.com";
-    private static final String PASS_WORD = "zzzzddddgggg1234";
+//    private static final String USER_NAME = "derekzhang4484@gmail.com";
+//    private static final String PASS_WORD = "zzzzddddgggg1234";
 
-    public static String login() throws IOException {
-        System.err.println("开始登陆，获取tiket");
+    private static final Map<String,String> accounts= new HashMap<String,String>(){
+        {
+//            put("derekzhang4484@gmail.com","zzzzddddgggg1234");
+
+//            put("d.erekzhang4484@gmail.com","ggggddddzzzz");
+//            put("de.rekzhang4484@gmail.com","ggggddddzzzz");
+//            put("der.ekzhang4484@gmail.com","ggggddddzzzz");
+//            put("dere.kzhang4484@gmail.com","ggggddddzzzz");
+//            put("derek.zhang4484@gmail.com","ggggddddzzzz");
+//            put("derekz.hang4484@gmail.com","ggggddddzzzz");
+//            put("derekzh.ang4484@gmail.com","ggggddddzzzz");
+//            put("derekzhan.g4484@gmail.com","ggggddddzzzz");
+//            put("derekzhang.4484@gmail.com","ggggddddzzzz");
+//            put("derekzhang4.484@gmail.com","ggggddddzzzz");
+
+            //put("derekzhang44.84@gmail.com","ggggddddzzzz");
+            //put("derekzhang448.4@gmail.com","ggggddddzzzz");
+            put("weiboanalysis1@163.com","bishe1gui");
+            put("weiboanalysis2@163.com","bishe1gui");
+            put("weiboanalysis3@163.com","bishe1gui");
+            put("weiboanalysis4@163.com","bishe1gui");
+            put("weiboanalysis5@163.com","bishe1gui");
+            put("weiboanalysis8@163.com","bishe1gui");
+            put("weiboanalysis9@163.com","bishe1gui");
+            put("weiboanalysis10@163.com","bishe1gui");
+            put("weiboanalysis7@163.com","bishe1gui");
+            put("weiboanalysis6@163.com","bishe1gui");
+        }
+    };
+
+    private static int cookieIndex = 5;
+    private static List<String> cookies;
+
+    public static String login(String user_name,String pass_word) throws IOException {
+        System.out.println("开始登陆，获取tiket");
         // 设置微博用户名以及密码
-        String ticket = requestAccessTicket(USER_NAME,PASS_WORD);
+        String ticket = requestAccessTicket(user_name,pass_word);
         if (ticket != "false") {
             System.out.println("获取成功:" + ticket);
             System.out.println("开始获取cookies");
@@ -29,7 +58,7 @@ public class HtmlUtils {
             System.out.println("cookies获取成功:" + cookies);
             return cookies;
         } else {
-            System.err.println("ticket获取失败，请检查用户名或者密码是否正确!");
+            System.out.println("ticket获取失败，请检查用户名或者密码是否正确!");
             return null;
         }
     }
@@ -107,7 +136,7 @@ public class HtmlUtils {
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
         conn.setRequestMethod("GET");
         conn.setUseCaches(false);
-        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:34.0) Gecko/20100101 Firefox/34.0");
+        conn.setRequestProperty("User-Agent", generateRandomUserAgent());
         conn.setRequestProperty("Cookie", cookies);
         conn.setRequestProperty("Accept-Language", "en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4");
         BufferedReader in = new BufferedReader(new InputStreamReader(
@@ -145,6 +174,44 @@ public class HtmlUtils {
         return response.toString();
     }
 
+    private static void generateCookieFile() throws IOException {
+        BufferedWriter out=new BufferedWriter(new FileWriter("cookies.txt"));
+        for(String userName:accounts.keySet()){
+            String cookie = login(userName,accounts.get(userName));
+            out.write(cookie);
+            out.newLine();
+        }
+        out.close();
+    }
+
+    private static void generateCookiePool() throws IOException {
+        BufferedReader in=new BufferedReader(new FileReader("cookies.txt"));
+        String line;
+        cookies = new ArrayList<>();
+        while((line= in.readLine())!=null){
+            cookies.add(line);
+        }
+    }
+
+    public static String getCookie() throws IOException {
+        if(cookies==null||cookies.isEmpty()){
+            generateCookiePool();
+        }
+        cookieIndex = (cookieIndex+1)%cookies.size();
+        if(cookieIndex==6){
+            cookieIndex = (cookieIndex+1)%cookies.size();
+        }
+        System.out.println("cookie index is " + cookieIndex);
+        return cookies.get(cookieIndex);
+    }
+
+    private static String generateRandomString(String[] array){
+        int max = array.length;
+        Random random = new Random();
+        int s = random.nextInt(max-1);
+        return array[s];
+    }
+
     private static String generateRandomUserAgent(){
         String[] array = {
                 "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1",
@@ -167,14 +234,11 @@ public class HtmlUtils {
                 "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24",
                 "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:34.0) Gecko/20100101 Firefox/34.0"
         };
-        int max = array.length;
-        Random random = new Random();
-        int s = random.nextInt(max-1);
-        return array[s];
+        return generateRandomString(array);
     }
 
+
     public static void main(String[] args) throws IOException {
-        String res = HTMLGet("http://s.weibo.com/wb/%2523MH370%2523&xsort=time&nodup=1&page=2");
-        System.out.println(res);
+//        generateCookieFile();
     }
 }

@@ -16,7 +16,7 @@ import javax.management.relation.Relation;
  * Created by zzzzddddgtuwup on 2/14/15.
  */
 public class EmbeddedNeo4j {
-    private static final String DB_PATH = "neo4j-topic-db";
+    private static final String DB_PATH = "neo4j-topic7-db";
     GraphDatabaseService graphDb;
     private static enum RelTypes implements RelationshipType {
         REPOST
@@ -50,14 +50,15 @@ public class EmbeddedNeo4j {
     }
 
     public Node createNode(String id, String screen_name, String time){
+        Node res = null;
         try (Transaction tx = graphDb.beginTx()) {
-            Node current = graphDb.createNode();
-            current.setProperty("id", id);
-            current.setProperty("name", screen_name);
-            current.setProperty("time",time);
+            res = graphDb.createNode();
+            res.setProperty("id", id);
+            res.setProperty("name", screen_name);
+            res.setProperty("time",time);
             tx.success();
         }
-        return null;
+        return res;
     }
     public Node findById(String id) {
         ExecutionEngine engine = new ExecutionEngine(graphDb);
@@ -129,6 +130,12 @@ public class EmbeddedNeo4j {
     public String getRelTime(Relationship relationship){
         try (Transaction tx = graphDb.beginTx()) {
             return (String) relationship.getProperty("time");
+        }
+    }
+
+    public String getNodeName(Node n){
+        try (Transaction tx = graphDb.beginTx()) {
+            return (String) n.getProperty("name");
         }
     }
 

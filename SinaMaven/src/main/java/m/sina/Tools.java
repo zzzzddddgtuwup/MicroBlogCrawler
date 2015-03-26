@@ -119,7 +119,7 @@ public class Tools {
     public static void main(String[] args) {
         //List<String> result = deleteDuplicate("@平安北京 今天下午发通报，称昨日查获三名涉毒人员。此前已有媒体报道，演员王学兵和张博因吸毒被拘。此外，通报还显示有一名女性侯某同时被抓获。#王学兵张博吸毒被拘#");
         //System.out.println(result);
-        String time = "2014-12-20 08:31";
+        String time = "今天 06:09";
         System.out.println(dateToStr(Tools.convertCalendar(time)));
     }
 }
