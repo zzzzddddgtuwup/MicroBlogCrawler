@@ -16,9 +16,9 @@ import javax.management.relation.Relation;
  * Created by zzzzddddgtuwup on 2/14/15.
  */
 public class EmbeddedNeo4j {
-    private static final String DB_PATH = "neo4j-topic7-db";
+    private static final String DB_PATH = "neo4j-topic0-db";
     GraphDatabaseService graphDb;
-    private static enum RelTypes implements RelationshipType {
+    public static enum RelTypes implements RelationshipType {
         REPOST
     }
 
@@ -59,6 +59,13 @@ public class EmbeddedNeo4j {
             tx.success();
         }
         return res;
+    }
+
+    public void nodeAddTime(Node node, String time){
+        try (Transaction tx = graphDb.beginTx()) {
+            node.setProperty("time",time);
+            tx.success();
+        }
     }
     public Node findById(String id) {
         ExecutionEngine engine = new ExecutionEngine(graphDb);

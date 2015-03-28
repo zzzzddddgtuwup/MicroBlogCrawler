@@ -226,7 +226,8 @@ public class Analysis {
             while(n_column.hasNext()) {
                 Relationship rel = n_column.next();
                 String currentTime = (String)rel.getProperty("time");
-                out.write(currentTime+'\n');
+                String uid = (String) rel.getEndNode().getProperty("id");
+                out.write(currentTime+'\t'+uid+'\n');
             }
         }
 
@@ -237,7 +238,8 @@ public class Analysis {
             while(n_column.hasNext()) {
                 Node node = n_column.next();
                 String currentTime = (String)node.getProperty("time");
-                out.write(currentTime+'\n');
+                String uid = (String) node.getProperty("time");
+                out.write(currentTime+'\t'+uid+'\n');
             }
         }
         out.close();
@@ -284,8 +286,8 @@ public class Analysis {
     public static void main(String[] args) throws IOException {
         Analysis test = new Analysis();
         test.db.createDb();
-//        test.outputTimeSeriesDataForTopic();
-        test.outputDegreeDataFortopic();
+        test.outputTimeSeriesDataForTopic();
+//        test.outputDegreeDataFortopic();
         test.db.shutDown();
     }
 }

@@ -189,6 +189,9 @@ public class sinaTopic {
                 if (current == null) {
                     System.out.println("create user node");
                     current = db.createNode(uid, name, time);
+                }else if(!current.hasProperty("time")){
+                    db.nodeAddTime(current,time);
+                    System.out.println("add time to node");
                 }
                 if (deepOnOriginalWeibo) {
                     String repost = card.select("ul.feed_action_info.feed_action_row4 > li").get(1).text();
