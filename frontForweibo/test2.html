@@ -6,9 +6,7 @@
 </head>
 
 <body>
-    <div id="graph">
-    </div>
-    <div role="navigation" class="navbar navbar-default navbar-static-top">
+<div role="navigation" class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="row">
                 <div class="navbar-header col-sm-6 col-md-6">
@@ -24,6 +22,28 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div id="graph">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+            <p id="range"></p>
+                startTime: <input type="text" id="startTime" />
+                endTime: <input type="text" id="endTime" />
+                <br />
+                <input id="reset" type="reset" value="Reset" />
+                <button id="submit">Submit</button>
+                <br />
+            </div>
+            <div>
+                <p>current node is</p>
+                <p id="detail"></p>
+            </div>
+        </div>
+    </div>
+    
 
     <style type="text/css">
         /*.node { stroke: #222; stroke-width: 1.5px; }*/
@@ -59,7 +79,7 @@
         function(error, data){
             //if (error) return;
             var res = JSON.parse(data.response);
-            //console.log("got response", JSON.parse(data.response).results[0].data);
+            // console.log("got response", JSON.parse(data.response).results[0].data);
             function idIndex(a,id) {
                 for (var i=0;i<a.length;i++) {
                     if (a[i].id == id) return i;
@@ -69,29 +89,64 @@
             //create adjacentList
             var adjacentList = [];
             var nodes=[], links=[];
+            var rangeMin = null;
+            var rangeMax = null;
             res.results[0].data.forEach(function (row) {
                 row.graph.nodes.forEach(function (n) {
                     if (idIndex(nodes,n.id) == null)
                         if("time" in n.properties){
-                            nodes.push({id:n.id,label:n.labels[0],name:n.properties.name,uid:n.properties.id,time:n.properties.time});
+                            var periodTime = n.properties.time.substr(0,13);
+                            nodes.push({id:n.id,label:n.labels[0],
+                                name:n.properties.name,
+                                uid:n.properties.id,
+                                time:n.properties.time
+                                ,period:periodTime 
+                            });
+                            if(rangeMin==null){
+                                rangeMin = periodTime;
+                            }else{
+                                rangeMin = rangeMin < periodTime ? rangeMin : periodTime;
+                            }
+                            if(rangeMax==null){
+                                rangeMax = periodTime;
+                            }else{
+                                rangeMax = rangeMax > periodTime ? rangeMax : periodTime;
+                            }
                         }else{
-                            nodes.push({id:n.id,label:n.labels[0],name:n.properties.name,uid:n.properties.id});
+                            nodes.push({
+                                id:n.id,
+                                label:n.labels[0],
+                                name:n.properties.name,
+                                uid:n.properties.id
+                            });
                         }
                         
                 });
                 var r = row.graph.relationships[0];
-                links.push({source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode),time:r.properties.time});
+                var periodTime = r.properties.time.substr(0,13)
+                links.push({source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode),
+                    time:r.properties.time,
+                    period:r.properties.time.substr(0,13)
+                });
                 if(!(r.startNode in adjacentList)){
                     adjacentList[r.startNode] = [];
                 }
                 adjacentList[r.startNode].push(r.endNode);
-
-                // links = links.concat( row.graph.relationships.map(function(r) {
-                //     return {source:idIndex(nodes,r.startNode),target:idIndex(nodes,r.endNode),type:r.type,time:r.properties.time};
-                // }));
-
+                if(rangeMin==null){
+                    rangeMin = periodTime;
+                }else{
+                    rangeMin = rangeMin < periodTime ? rangeMin : periodTime;
+                }
+                if(rangeMax==null){
+                    rangeMax = periodTime;
+                }else{
+                    rangeMax = rangeMax > periodTime ? rangeMax : periodTime;
+                }
             });
             viz = {nodes:nodes, links:links};
+            console.log(rangeMin + " " + rangeMax);
+            $("p#range").text("time range is " + rangeMin + " to "
+                + rangeMax);
             // console.log(viz);
             // console.log(adjacentList);
 
@@ -195,6 +250,7 @@
                 .on("dblclick", dblclick)
                 .on("mouseover", function(d)
                  {
+                    $("p#detail").text(d3.select(labels[0][d.index]).text())
                      d3.select(labels[0][d.index]).style("visibility","visible")
                  })
                 .on("mouseout", function(d)
@@ -217,9 +273,9 @@
             var labels = node.append("text").
             text(function(d) {
                 if("time" in d){
-                    return d.name + " " + d.uid + " " + d.time
+                    return d.name + "  " + d.uid + "  " + d.time;
                 }else{
-                    return d.name + " " + d.uid;
+                    return d.name + "  " + d.uid;
                 }
             })
             .style("visibility","hidden");
@@ -306,9 +362,10 @@
                         });
                 };
             }
-
+            
             function dblclick(){
-                node.style("stroke-opacity",1);
+                // node.style("stroke-opacity",1);
+                node.style("stroke-opacity",1).attr('fill-opacity',1);
                 edges.style("stroke-opacity",1).attr("marker-end", "url(#end)");
             }
             function bfs(startId){
@@ -328,6 +385,27 @@
                 }
                 return result;
             }
+
+            $("#submit").on("click", function () {
+                var sT = $("#startTime").val(); 
+                var eT = $("#endTime").val(); 
+                node.style("stroke-opacity", function(o) {
+                        thisOpacity = (o.period>=sT && o.period<=eT)?1:0.1;
+                        this.setAttribute('fill-opacity', thisOpacity);
+                        return thisOpacity;
+                    });
+                edges.style("stroke-opacity", function(o) {
+                        return (o.period>=sT && o.period <=eT) ? 1 : 0.1;
+                    })
+                    .attr("marker-end", function(o){
+                        return (o.period>=sT && o.period <=eT) ? "url(#end)" : ""
+                        });
+             });
+
+            $("#reset").on("click", function () {
+                node.style("stroke-opacity",1).attr('fill-opacity',1);
+                edges.style("stroke-opacity",1).attr("marker-end", "url(#end)");
+             });
         } 
     );
 </script>
