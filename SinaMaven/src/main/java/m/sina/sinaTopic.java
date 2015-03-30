@@ -34,7 +34,7 @@ public class sinaTopic {
         test.testOnTopic();
     }
 
-    private static String topic = "#唐嫣吴亦凡相爱#";
+    private static String topic = "#2015重庆国际马拉松#";
 
     public void testOnTopic() throws IOException, ParseException, InterruptedException {
 //        System.out.println("开始搜索微博");
@@ -189,7 +189,7 @@ public class sinaTopic {
                 if (current == null) {
                     System.out.println("create user node");
                     current = db.createNode(uid, name, time);
-                }else if(!current.hasProperty("time")){
+                }else if(!db.hasNodeProperty(current,"time")){
                     db.nodeAddTime(current,time);
                     System.out.println("add time to node");
                 }

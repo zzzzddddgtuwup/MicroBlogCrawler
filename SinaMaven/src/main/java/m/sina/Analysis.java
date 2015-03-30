@@ -238,7 +238,7 @@ public class Analysis {
             while(n_column.hasNext()) {
                 Node node = n_column.next();
                 String currentTime = (String)node.getProperty("time");
-                String uid = (String) node.getProperty("time");
+                String uid = (String) node.getProperty("id");
                 out.write(currentTime+'\t'+uid+'\n');
             }
         }

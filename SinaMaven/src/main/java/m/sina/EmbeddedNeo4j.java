@@ -2,7 +2,9 @@ package m.sina;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import org.neo4j.cypher.javacompat.ExecutionEngine;
 import org.neo4j.cypher.javacompat.ExecutionResult;
@@ -16,7 +18,7 @@ import javax.management.relation.Relation;
  * Created by zzzzddddgtuwup on 2/14/15.
  */
 public class EmbeddedNeo4j {
-    private static final String DB_PATH = "neo4j-topic0-db";
+    private static final String DB_PATH = "neo4j-topic7-db";
     GraphDatabaseService graphDb;
     public static enum RelTypes implements RelationshipType {
         REPOST
@@ -63,7 +65,7 @@ public class EmbeddedNeo4j {
 
     public void nodeAddTime(Node node, String time){
         try (Transaction tx = graphDb.beginTx()) {
-            node.setProperty("time",time);
+            node.setProperty("time", time);
             tx.success();
         }
     }
@@ -141,9 +143,12 @@ public class EmbeddedNeo4j {
     }
 
     public String getNodeName(Node n){
+        String name;
         try (Transaction tx = graphDb.beginTx()) {
-            return (String) n.getProperty("name");
+            name = (String) n.getProperty("name");
+            tx.success();
         }
+        return name;
     }
 
     public void updateRelTime(Relationship relationship,String time){
@@ -165,5 +170,70 @@ public class EmbeddedNeo4j {
         });
     }
 
+    public Set<Node> getAllNodes(){
+        Set<Node> set = new HashSet<>();
+
+        ExecutionEngine engine = new ExecutionEngine(graphDb);
+        ExecutionResult result;
+        String statement = "match (n) - [r]->(m) return n as t UNION match (n) - [r]->(m) return m as t";
+        try (Transaction tx = graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Node> n_column = result.columnAs("t");
+            while(n_column.hasNext()) {
+                Node node = n_column.next();
+                set.add(node);
+            }
+            tx.success();
+        }
+
+        return set;
+    }
+
+    public Set<Node> getAllRootNodeWithRel(){
+        Set<Node> set = new HashSet<>();
+
+        ExecutionEngine engine = new ExecutionEngine(graphDb);
+        ExecutionResult result;
+        String statement = "match (n)-[:REPOST]->(m) where not (()-[:REPOST]->(n)) with distinct n return n";
+        try (Transaction tx = graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Node> n_column = result.columnAs("n");
+            while(n_column.hasNext()) {
+                Node node = n_column.next();
+                set.add(node);
+            }
+            tx.success();
+        }
+
+        return set;
+    }
+
+    public Set<Node> getAllNodeWithOutRel(){
+        Set<Node> set = new HashSet<>();
+
+        ExecutionEngine engine = new ExecutionEngine(graphDb);
+        ExecutionResult result;
+        String statement = "match (n)-[:REPOST]->(m) with distinct n return n";
+        try (Transaction tx = graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Node> n_column = result.columnAs("n");
+            while(n_column.hasNext()) {
+                Node node = n_column.next();
+                set.add(node);
+            }
+            tx.success();
+        }
+
+        return set;
+    }
+
+    public boolean hasNodeProperty(Node node, String p){
+        boolean result = false;
+        try (Transaction tx = graphDb.beginTx()) {
+            result = node.hasProperty(p);
+            tx.success();
+        }
+        return result;
+    }
 
 }

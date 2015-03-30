@@ -239,6 +239,6 @@ public class HtmlUtils {
 
 
     public static void main(String[] args) throws IOException {
-//        generateCookieFile();
+        generateCookieFile();
     }
 }
