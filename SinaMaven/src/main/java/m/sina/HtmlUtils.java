@@ -44,11 +44,11 @@ public class HtmlUtils {
         }
     };
 
-    private static int cookieIndex = 5;
+    private static int cookieIndex = 0;
     private static List<String> cookies;
 
     public static String login(String user_name,String pass_word) throws IOException {
-        System.out.println("开始登陆，获取tiket");
+        System.out.println("开始登陆"+user_name+"，获取tiket");
         // 设置微博用户名以及密码
         String ticket = requestAccessTicket(user_name,pass_word);
         if (ticket != "false") {

@@ -10,10 +10,7 @@ import org.neo4j.graphdb.Transaction;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by zzzzddddgtuwup on 3/23/15.
@@ -283,11 +280,97 @@ public class Analysis {
         out.close();
     }
 
+    public List<String> getTimeList(){
+        ExecutionEngine engine = new ExecutionEngine(db.graphDb);
+        ExecutionResult result;
+
+        Set<String> set = new TreeSet<>();
+        String statement = "match (n) - [r]->(m) return r";
+        try (Transaction tx = db.graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Relationship> n_column = result.columnAs("r");
+            while(n_column.hasNext()) {
+                Relationship rel = n_column.next();
+                set.add(rel.getProperty("time").toString().substring(0, 13));
+            }
+        }
+
+        statement = "match (n) where has (n.time) return n";
+        try (Transaction tx = db.graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Node> n_column = result.columnAs("n");
+            while(n_column.hasNext()) {
+                Node node = n_column.next();
+                set.add(((String) node.getProperty("time")).substring(0, 13));
+            }
+        }
+        List<String> list = new LinkedList<>();
+        list.addAll(set);
+        return list;
+    }
+
+    public void DegreeDistributionOnTimeSeries(int timeStep) throws IOException {
+        List<String> timeList = getTimeList();
+        BufferedWriter out=new BufferedWriter(new FileWriter("outdegreeKey.txt"));
+        BufferedWriter out1 =new BufferedWriter(new FileWriter("outdegreeValue.txt"));
+        int count = 0;
+
+        while(!timeList.isEmpty()) {
+            if(count == 0) {
+                String current = timeList.remove(0);
+                String[] result = getOutDegreeDistribution(current);
+//            System.out.println(result[0]);
+                out.write(result[0] + "\n");
+                out1.write(result[1] + "\n");
+            }
+            count = (count + 1)%timeStep;
+        }
+        out.close();
+        out1.close();
+    }
+    public String[] getOutDegreeDistribution(String time){
+        String endTime = time + ":59:59";
+        ExecutionEngine engine = new ExecutionEngine(db.graphDb);
+        ExecutionResult result;
+
+        String statement = "match n where has(n.time) AND n.time <= \"" + endTime + "\" return n as t "
+                + "UNION "
+                + "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" return n as t "
+                + "UNION "
+                + "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" return m as t";
+        Map<Integer,Integer> outdegreeMap = new TreeMap<>();
+        try (Transaction tx = db.graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Node> n_column = result.columnAs("t");
+            while(n_column.hasNext()) {
+                Node node = n_column.next();
+                int outdegree = 0;
+                for(Relationship rel:node.getRelationships(Direction.OUTGOING)){
+                    if(rel.getProperty("time").toString().compareTo(endTime)<=0){
+                        outdegree++;
+                    }
+                }
+                if(outdegreeMap.containsKey(outdegree)){
+                    outdegreeMap.put(outdegree,outdegreeMap.get(outdegree)+1);
+                }else{
+                    outdegreeMap.put(outdegree,1);
+                }
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
+        for(Integer k:outdegreeMap.keySet()) {
+            sb.append(k + "\t");
+            sb2.append(outdegreeMap.get(k) + "\t");
+        }
+        return new String[] {sb.toString().trim(),sb2.toString().trim()};
+    }
     public static void main(String[] args) throws IOException {
         Analysis test = new Analysis();
         test.db.createDb();
-        test.outputTimeSeriesDataForTopic();
+//        test.outputTimeSeriesDataForTopic();
 //        test.outputDegreeDataFortopic();
+        test.DegreeDistributionOnTimeSeries(1);
         test.db.shutDown();
     }
 }

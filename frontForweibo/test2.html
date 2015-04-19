@@ -29,6 +29,10 @@
         </div>
         <div class="col-md-2">
             <div>
+            <button id="degree">degree</button>
+            <button id="closeness">closeness</button>
+            <button id="betweenness">betweenness</button>
+            <button id="pagerank">pagerank</button>
             <p id="range"></p>
                 startTime: <input type="text" id="startTime" />
                 endTime: <input type="text" id="endTime" />
@@ -46,12 +50,12 @@
     
 
     <style type="text/css">
-        /*.node { stroke: #222; stroke-width: 1.5px; }*/
-        circle {
+        .node { stroke: #222; stroke-width: 1.5px; }
+        /*circle {
           fill: #ccc;
           stroke: #222;
           stroke-width: 1.5px;
-        }
+        }*/
         .link {stroke: #666;/* stroke-opacity: .6;*/stroke-width: 1.5px; }
 
         text {
@@ -79,7 +83,7 @@
         function(error, data){
             //if (error) return;
             var res = JSON.parse(data.response);
-            // console.log("got response", JSON.parse(data.response).results[0].data);
+            console.log("got response", JSON.parse(data.response).results[0].data);
             function idIndex(a,id) {
                 for (var i=0;i<a.length;i++) {
                     if (a[i].id == id) return i;
@@ -99,8 +103,12 @@
                             nodes.push({id:n.id,label:n.labels[0],
                                 name:n.properties.name,
                                 uid:n.properties.id,
-                                time:n.properties.time
-                                ,period:periodTime 
+                                time:n.properties.time,
+                                period:periodTime,
+                                degree:n.properties.outdegree,
+                                betweenness:n.properties.betweenness,
+                                closeness:n.properties.closeness,
+                                pagerank:n.properties.pagerank
                             });
                             if(rangeMin==null){
                                 rangeMin = periodTime;
@@ -117,10 +125,13 @@
                                 id:n.id,
                                 label:n.labels[0],
                                 name:n.properties.name,
-                                uid:n.properties.id
+                                uid:n.properties.id,
+                                degree:n.properties.outdegree,
+                                betweenness:n.properties.betweenness,
+                                closeness:n.properties.closeness,
+                                pagerank:n.properties.pagerank
                             });
-                        }
-                        
+                        }  
                 });
                 var r = row.graph.relationships[0];
                 var periodTime = r.properties.time.substr(0,13)
@@ -144,16 +155,24 @@
                 }
             });
             viz = {nodes:nodes, links:links};
-            console.log(rangeMin + " " + rangeMax);
+            //console.log(rangeMin + " " + rangeMax);
             $("p#range").text("time range is " + rangeMin + " to "
                 + rangeMax);
-            // console.log(viz);
+             console.log(viz);
             // console.log(adjacentList);
 
             var w = 2000, h = 1000;
 
+            var linkramp=d3.scale.linear().domain([1,10,40]).range([400,600,1000]).clamp(true);
+            var radiusScale = d3.scale.linear().domain([1,10,100,1000]).range([1,5,20,30]).clamp(true);
+            var reverseRadiusScale = d3.scale.linear().domain([0,2]).range([1,30]).clamp(true);
+            var pageRankScale = d3.scale.linear().domain([0,0.00001,0.0001,0.001,0.01,0.1,1]).range([1,4,8,16,20,25,30]).nice();
+
             var force = d3.layout.force()
-            .charge(-50).linkDistance(10).size([w, h])
+            .charge(-100).linkDistance(function(d){
+                // return d.source.degree;
+                return 20;
+            }).size([w, h])
             .nodes(viz.nodes).links(viz.links).on("tick", tick).start();
 
             var svg = d3.select("#graph")
@@ -173,6 +192,20 @@
                 .attr("viewBox", "0 -5 10 10")
                 .attr("refX", 15)
                 .attr("refY", -1.5)
+                .attr("markerWidth", 4)
+                .attr("markerHeight", 4)
+                .attr("orient", "auto")
+                .append("svg:path")
+                .attr("d", "M0,-5L10,0L0,5");
+
+            var marker = svg.append("svg:defs").selectAll("marker")
+                .data(["pink"])      // Different link/path types can be defined here
+                .enter().append("svg:marker")    // This section adds in the arrows
+                .attr("id", String)
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 15)
+                .attr("refY", -1.5)
+                .attr("fill","pink")
                 .attr("markerWidth", 4)
                 .attr("markerHeight", 4)
                 .attr("orient", "auto")
@@ -239,6 +272,7 @@
                 .data(force.nodes())
                 .enter().append("g")
                 .attr("class", "node")
+                .attr("id",function(d){ return "node"+d.id;})
                 .style("fill", function(d){
                     if("time" in d){
                         return "lightsteelblue";
@@ -362,12 +396,13 @@
                         });
                 };
             }
-            
+
             function dblclick(){
                 // node.style("stroke-opacity",1);
                 node.style("stroke-opacity",1).attr('fill-opacity',1);
                 edges.style("stroke-opacity",1).attr("marker-end", "url(#end)");
             }
+
             function bfs(startId){
                 var result = [];
                 var toVisitedList = [];
@@ -390,21 +425,92 @@
                 var sT = $("#startTime").val(); 
                 var eT = $("#endTime").val(); 
                 node.style("stroke-opacity", function(o) {
-                        thisOpacity = (o.period>=sT && o.period<=eT)?1:0.1;
-                        this.setAttribute('fill-opacity', thisOpacity);
-                        return thisOpacity;
-                    });
+                    var thisOpacity = 1;
+                    if(o.period < sT){
+                        thisOpacity = 0.5;
+                    }else if(o.period <= eT){
+                        thisOpacity = 1;
+                    }else{
+                        thisOpacity = 0.1;
+                    }
+                    this.setAttribute('fill-opacity', thisOpacity);
+                    return thisOpacity;
+                })
+                .style("fill",function(o){
+                    if(o.period < sT){
+                        return "pink";
+                    }else if(o.period <= eT){
+                        return "green";
+                    }else{
+                        return "#ccc";
+                    }
+                });
                 edges.style("stroke-opacity", function(o) {
-                        return (o.period>=sT && o.period <=eT) ? 1 : 0.1;
+                        if(o.period < sT){
+                            d3.select("#node" + o.target.id).style("stroke-opacity",0.5).attr('fill-opacity',0.5).style("fill", "pink");
+                            return 0.5;
+                        }else if(o.period > eT){
+                            d3.select("#node" + o.target.id).style("stroke-opacity",0.1).attr('fill-opacity',0.1).style("fill", "#ccc");
+                            return 0.1;
+                        }else{
+                            d3.select("#node" + o.target.id).style("stroke-opacity",1).attr('fill-opacity',1).style("fill", "green");
+                            return 1;
+                        }
+                    })
+                    .style("stroke",function(o){
+                        if(o.period < sT){
+                            return "pink";
+                        }else if(o.period <= eT){
+                            return "green";
+                        }else{
+                            return "#666"
+                        }
                     })
                     .attr("marker-end", function(o){
-                        return (o.period>=sT && o.period <=eT) ? "url(#end)" : ""
-                        });
+                        if(o.period < sT){
+                            return "url(#pink)";
+                        }else if(o.period <= eT){
+                            return "url(#end)";
+                        }else{
+                            return ""
+                        }
+                    });
              });
 
             $("#reset").on("click", function () {
-                node.style("stroke-opacity",1).attr('fill-opacity',1);
-                edges.style("stroke-opacity",1).attr("marker-end", "url(#end)");
+                node.style("stroke-opacity",1).attr('fill-opacity',1).style("fill","#222");
+                node.style("fill", function(d){
+                    if("time" in d){
+                        return "lightsteelblue";
+                    }else{
+                        return "#ccc";
+                    }
+                });
+                edges.style("stroke-opacity",1).attr("marker-end", "url(#end)").style("stroke","#666");
+             });
+
+            $("#degree").on("click", function () {
+                node.select("circle").attr("r", function(o){
+                    return radiusScale(o.degree+1);
+                });
+             });
+
+            $("#closeness").on("click", function () {
+                node.select("circle").attr("r", function(o){
+                    return reverseRadiusScale(o.closeness);
+                });
+             });
+
+            $("#betweenness").on("click", function () {
+                node.select("circle").attr("r", function(o){
+                    return radiusScale(o.betweenness+1);
+                });
+             });
+
+            $("#pagerank").on("click", function () {
+                node.select("circle").attr("r", function(o){
+                    return pageRankScale(o.pagerank);
+                });
              });
         } 
     );

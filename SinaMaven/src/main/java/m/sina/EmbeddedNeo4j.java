@@ -2,9 +2,7 @@ package m.sina;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 import org.neo4j.cypher.javacompat.ExecutionEngine;
 import org.neo4j.cypher.javacompat.ExecutionResult;
@@ -12,13 +10,11 @@ import org.neo4j.graphdb.*;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 import org.neo4j.kernel.impl.util.FileUtils;
 
-import javax.management.relation.Relation;
-
 /**
  * Created by zzzzddddgtuwup on 2/14/15.
  */
 public class EmbeddedNeo4j {
-    private static final String DB_PATH = "neo4j-topic7-db";
+    private static final String DB_PATH = "neo4j-topic4-db";
     GraphDatabaseService graphDb;
     public static enum RelTypes implements RelationshipType {
         REPOST
@@ -170,25 +166,40 @@ public class EmbeddedNeo4j {
         });
     }
 
-    public Set<Node> getAllNodes(){
-        Set<Node> set = new HashSet<>();
-
+    public List<Node> getAllNodes(){
+        List<Node> list = new ArrayList<>();
         ExecutionEngine engine = new ExecutionEngine(graphDb);
         ExecutionResult result;
-        String statement = "match (n) - [r]->(m) return n as t UNION match (n) - [r]->(m) return m as t";
+        String statement = "match (n) - [r]->(m) return n as t UNION match (n) - [r]->(m) return m as t order by t.id";
         try (Transaction tx = graphDb.beginTx()) {
             result = engine.execute(statement);
             Iterator<Node> n_column = result.columnAs("t");
             while(n_column.hasNext()) {
                 Node node = n_column.next();
-                set.add(node);
+                list.add(node);
             }
             tx.success();
         }
-
-        return set;
+        return list;
     }
 
+    public Set<Relationship> getAllRels(){
+        Set<Relationship> set = new HashSet<>();
+
+        ExecutionEngine engine = new ExecutionEngine(graphDb);
+        ExecutionResult result;
+        String statement = "match (n) - [r]->(m) return r";
+        try (Transaction tx = graphDb.beginTx()) {
+            result = engine.execute(statement);
+            Iterator<Relationship> r_column = result.columnAs("r");
+            while(r_column.hasNext()) {
+                Relationship rel = r_column.next();
+                set.add(rel);
+            }
+            tx.success();
+        }
+        return set;
+    }
     public Set<Node> getAllRootNodeWithRel(){
         Set<Node> set = new HashSet<>();
 

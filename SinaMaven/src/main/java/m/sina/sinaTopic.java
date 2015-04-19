@@ -27,14 +27,11 @@ public class sinaTopic {
     }
 
     public static void main(String[] args) throws Exception {
-        String[] topics = {"#伊能静秦昊婚礼#", "#广州恒大VS石家庄永昌#",
-                "#日本最美女高中生#", "#央视主播炮轰收视率#",
-                "#男人下厨9大理由#", "#王学兵张博吸毒被拘#"};
         sinaTopic test = new sinaTopic();
         test.testOnTopic();
     }
 
-    private static String topic = "#2015重庆国际马拉松#";
+    private static String topic = "#15岁女孩狂整容#";
 
     public void testOnTopic() throws IOException, ParseException, InterruptedException {
 //        System.out.println("开始搜索微博");
@@ -47,8 +44,9 @@ public class sinaTopic {
 //        testAvailability("#李光耀去世#", "2015-03-23-18", "2015-03-24-02");
         db.cleanDb();
         db.createDb();
-//        searchTopic("2015-03-21-18", "2015-03-25-08");
-        searchSmallTopic();
+        searchTopic("2015-04-11-00", "2015-04-15-00");
+//        testAvailability("2015-04-13-07", "2015-04-15-00");
+//        searchSmallTopic();
         db.shutDown();
     }
 
@@ -58,7 +56,12 @@ public class sinaTopic {
             System.err.println("time is " + time);
             String url = "http://s.weibo.com/wb/" + URLEncoder.encode(topic, "utf-8") + "&xsort=time&timescope=custom:" + time + ":" + time + "&nodup=1";
             String firstPage = getHtmlFromJs(HtmlUtils.HTMLGet(url, HtmlUtils.getCookie()));
-            System.out.println(getTotalResNumInTimeBlk(firstPage));
+            int itemCounts = getTotalResNumInTimeBlk(firstPage);
+            if(itemCounts > 1000){
+                System.err.println(itemCounts);
+            }else{
+                System.out.println(itemCounts);
+            }
             Thread.sleep(1000 * 3);
         }
     }
@@ -109,9 +112,10 @@ public class sinaTopic {
         String js = "";
         if (m.find()) {
             js = m.group();
+//            System.out.println(js);
             int indexLeft = js.indexOf("{");
-            int indexRight = js.indexOf("}");
-            String json = js.substring(indexLeft, indexRight + 1);
+            int indexRight = js.indexOf(")</script>");
+            String json = js.substring(indexLeft, indexRight);
             return new JSONObject(json).getString("html");
         } else {
             return js;
@@ -299,7 +303,9 @@ public class sinaTopic {
     private boolean updateRelationship(Node start, Node end, String time) {
         Relationship relationship = db.findRelByNodes(start, end);
         if (relationship == null) {
-            db.addRelWithTime(start, end, time);
+            if(!start.equals(end)&&!db.getNodeName(start).equals(db.getNodeName(end))){
+                db.addRelWithTime(start, end, time);
+            }
             return true;
         } else {
             String timeString = db.getRelTime(relationship);
@@ -311,24 +317,24 @@ public class sinaTopic {
     }
 
     public void getAllRepostForTweet(String url, Node author) throws IOException, InterruptedException {
-        String firstPage = HTMLGet(url + "page=1");
+        String firstPage = HTMLGet(url + "page=1",HtmlUtils.getCookie());
         int maxPage = ParseUtils.getPageNum(firstPage);
         System.out.println("Maxcard is " + maxPage);
         for (int i = maxPage; i >= 2; i--) {
-            String html = HTMLGet(url + "page=" + i);
-            System.out.println("current card page is " + i);
             try {
+                String html = HTMLGet(url + "page=" + i,HtmlUtils.getCookie());
+                System.out.println("current card page is " + i);
                 JSONObject jo = new JSONArray(html).getJSONObject(0);
                 if (jo.getString("mod_type").equals("mod/empty")) {
                     continue;
                 }
                 decodeCardGroup(jo.getJSONArray("card_group"), author);
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 Thread.sleep(1000 * 5);
                 ++i;
             }
-            Thread.sleep(500);
+            Thread.sleep(1000 * 3);
         }
         try {
             JSONArray cardGroup = new JSONArray(firstPage).getJSONObject(1).getJSONArray("card_group");

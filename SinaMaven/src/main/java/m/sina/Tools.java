@@ -1,4 +1,6 @@
 package m.sina;
+import org.neo4j.graphdb.Node;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -116,6 +118,13 @@ public class Tools {
         return result;
     }
 
+    public static Map<Node,Integer> reverseArrayToHashMap(Node[] node_arr){
+        Map<Node,Integer> result = new HashMap<>();
+        for(int i = 0; i < node_arr.length; i++){
+            result.put(node_arr[i],i);
+        }
+        return result;
+    }
     public static void main(String[] args) {
         //List<String> result = deleteDuplicate("@平安北京 今天下午发通报，称昨日查获三名涉毒人员。此前已有媒体报道，演员王学兵和张博因吸毒被拘。此外，通报还显示有一名女性侯某同时被抓获。#王学兵张博吸毒被拘#");
         //System.out.println(result);
