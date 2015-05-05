@@ -121,7 +121,7 @@ public class mSinaAnalysis {
     }
 
     private boolean updateRelationship(Node start, Node end, String time, String tweetId){
-        String currentTimePro = Tools.dateToStr(Tools.convertCalendar(time));
+        String currentTimePro = Tools.dateToStr(Tools.convertCalendar(time),null);
         Relationship relationship = db.findRelByNodesAndTweetId(start, end, tweetId);
         if (relationship == null) {
             db.addRelWithTimeAndTweetId(start, end, currentTimePro, tweetId);

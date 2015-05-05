@@ -137,7 +137,7 @@ public class sinaTopic {
             String name = card.select("a.name_txt").attr("nick-name");
             String text = card.select("div.feed_content.wbcon >p.comment_txt").text();
             String time = card.select("div.feed_from.W_textb > a[title]").text();
-            time = Tools.dateToStr(Tools.convertCalendar(time));
+            time = Tools.dateToStr(Tools.convertCalendar(time),null);
 
 
             String uid = card.select("div.feed_content.wbcon > a").attr("usercard");
@@ -173,7 +173,7 @@ public class sinaTopic {
                     continue;
                 }
                 String originalTime = card.select("div.comment_info").select("div.feed_from.W_textb > a[date]").text();
-                originalTime = Tools.dateToStr(Tools.convertCalendar(originalTime));
+                originalTime = Tools.dateToStr(Tools.convertCalendar(originalTime),null);
                 String originalId = card.select("a.W_texta.W_fb").attr("usercard");
                 originalId = originalId.substring(3);
                 addToGraph(name, uid, time, text, originalUser, originalId, originalTime);
@@ -356,7 +356,7 @@ public class sinaTopic {
 
     //only for repost tweet
     private void addRepostRelationInGraph(String id, String screen_name, String text, String time, Node author) {
-        time = Tools.dateToStr(Tools.convertCalendar(time));
+        time = Tools.dateToStr(Tools.convertCalendar(time),null);
         System.out.println(
                 "user id is " + id + "," +
                         "name:" + screen_name + "," +

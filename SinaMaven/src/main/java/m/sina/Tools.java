@@ -12,20 +12,36 @@ import java.util.regex.Pattern;
  * Created by zzzzddddgtuwup on 2/25/15.
  */
 public class Tools {
+
+    private static String TIME_FORMAT="yyyy-MM-dd HH:mm:ss";
     public static boolean timeBefore(String s1, String s2) {
-        Date t1 = strToDate(s1);
-        Date t2 = strToDate(s2);
+        Date t1 = strToDate(s1,"");
+        Date t2 = strToDate(s2,"");
         return t1.before(t2);
     }
 
 
-    public static String dateToStr(Date date) {
-        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public static String dateToStr(Date date,String format) {
+        DateFormat format1 = null;
+        if(format==null||format.isEmpty()){
+            format1 = new SimpleDateFormat(TIME_FORMAT);
+        }else{
+            format1 = new SimpleDateFormat(format);
+        }
         return format1.format(date);
     }
 
-    public static Date strToDate(String s) {
-        DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public static long getDifHour(Date prev, Date cur){
+        long diff = cur.getTime()-prev.getTime();
+        return diff/(1000*60*60);
+    }
+    public static Date strToDate(String s,String format) {
+        DateFormat format1 = null;
+        if(format==null||format.isEmpty()){
+            format1 = new SimpleDateFormat(TIME_FORMAT);
+        }else{
+            format1 = new SimpleDateFormat(format);
+        }
         Date result = null;
         try {
             result = format1.parse(s);
@@ -35,12 +51,13 @@ public class Tools {
         return result;
     }
 
+    //This method converts time string from weibo into date type
     public static Date convertCalendar(String time) {
         TimeZone timezone = TimeZone.getTimeZone("GMT+8"); //设置为东八区
         TimeZone.setDefault(timezone);// 设置时区
 
         Calendar date = Calendar.getInstance();
-//        System.out.println(date.getTime().toString());
+        //there are several time formats in weibo
         if (time.contains("秒前")) {
             int sec = getNum(time);
             date.set(Calendar.SECOND, date.get(Calendar.SECOND) - sec);
@@ -128,7 +145,5 @@ public class Tools {
     public static void main(String[] args) {
         //List<String> result = deleteDuplicate("@平安北京 今天下午发通报，称昨日查获三名涉毒人员。此前已有媒体报道，演员王学兵和张博因吸毒被拘。此外，通报还显示有一名女性侯某同时被抓获。#王学兵张博吸毒被拘#");
         //System.out.println(result);
-        String time = "今天 06:09";
-        System.out.println(dateToStr(Tools.convertCalendar(time)));
     }
 }

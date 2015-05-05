@@ -295,15 +295,15 @@ public class Analysis {
             }
         }
 
-        statement = "match (n) where has (n.time) return n";
-        try (Transaction tx = db.graphDb.beginTx()) {
-            result = engine.execute(statement);
-            Iterator<Node> n_column = result.columnAs("n");
-            while(n_column.hasNext()) {
-                Node node = n_column.next();
-                set.add(((String) node.getProperty("time")).substring(0, 13));
-            }
-        }
+//        statement = "match (n) where has (n.time) return n";
+//        try (Transaction tx = db.graphDb.beginTx()) {
+//            result = engine.execute(statement);
+//            Iterator<Node> n_column = result.columnAs("n");
+//            while(n_column.hasNext()) {
+//                Node node = n_column.next();
+//                set.add(((String) node.getProperty("time")).substring(0, 13));
+//            }
+//        }
         List<String> list = new LinkedList<>();
         list.addAll(set);
         return list;
@@ -313,31 +313,54 @@ public class Analysis {
         List<String> timeList = getTimeList();
         BufferedWriter out=new BufferedWriter(new FileWriter("outdegreeKey.txt"));
         BufferedWriter out1 =new BufferedWriter(new FileWriter("outdegreeValue.txt"));
-        int count = 0;
+        BufferedWriter out2 =new BufferedWriter(new FileWriter("max_ave.txt"));
 
+        int count = 0;
+        Date startTime = Tools.strToDate(timeList.get(0),"yyyy-MM-dd HH");
         while(!timeList.isEmpty()) {
             if(count == 0) {
                 String current = timeList.remove(0);
-                String[] result = getOutDegreeDistribution(current);
+                Map<Integer,Integer> outdegreeMap = getOutDegreeDistribution(current);
+                Date currentTime = Tools.strToDate(current,"yyyy-MM-dd HH");
+                StringBuilder sb = new StringBuilder();
+                StringBuilder sb2 = new StringBuilder();
+                int maxDegree = 0;
+                int degreeSum = 0;
+                int nodeAmount = 0;
+                int maxAmount = 0;
+//                System.out.println("time is current");
+                for(Integer k:outdegreeMap.keySet()) {
+                    int value = outdegreeMap.get(k);
+                    degreeSum+=value*k;
+                    nodeAmount+=value;
+                    maxDegree = Math.max(maxDegree, k);
+                    maxAmount = Math.max(maxAmount,value);
+                    sb.append(k + "\t");
+                    sb2.append(outdegreeMap.get(k) + "\t");
+                }
+                out2.write(Tools.getDifHour(startTime,currentTime)+""+'\t'+maxDegree+'\t'+(double)degreeSum/nodeAmount+'\t'+maxAmount+"\n");
 //            System.out.println(result[0]);
-                out.write(result[0] + "\n");
-                out1.write(result[1] + "\n");
+                out.write(sb.toString() + "\n");
+                out1.write(sb2.toString() + "\n");
             }
             count = (count + 1)%timeStep;
         }
         out.close();
         out1.close();
+        out2.close();
     }
-    public String[] getOutDegreeDistribution(String time){
+
+    public Map<Integer,Integer> getOutDegreeDistribution(String time){
         String endTime = time + ":59:59";
         ExecutionEngine engine = new ExecutionEngine(db.graphDb);
         ExecutionResult result;
 
-        String statement = "match n where has(n.time) AND n.time <= \"" + endTime + "\" return n as t "
-                + "UNION "
-                + "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" return n as t "
-                + "UNION "
-                + "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" return m as t";
+        String statement =
+//                "match n where has(n.time) AND n.time <= \"" + endTime + "\" return n as t "
+//                + "UNION " +
+                "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" with distinct n return n as t ";
+//                + "UNION "
+//                + "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" return m as t";
         Map<Integer,Integer> outdegreeMap = new TreeMap<>();
         try (Transaction tx = db.graphDb.beginTx()) {
             result = engine.execute(statement);
@@ -350,27 +373,57 @@ public class Analysis {
                         outdegree++;
                     }
                 }
-                if(outdegreeMap.containsKey(outdegree)){
-                    outdegreeMap.put(outdegree,outdegreeMap.get(outdegree)+1);
-                }else{
-                    outdegreeMap.put(outdegree,1);
+                if(outdegree!=0){
+                    if(outdegreeMap.containsKey(outdegree)){
+                        outdegreeMap.put(outdegree,outdegreeMap.get(outdegree)+1);
+                    }else{
+                        outdegreeMap.put(outdegree,1);
+                    }
                 }
             }
         }
-        StringBuilder sb = new StringBuilder();
-        StringBuilder sb2 = new StringBuilder();
-        for(Integer k:outdegreeMap.keySet()) {
-            sb.append(k + "\t");
-            sb2.append(outdegreeMap.get(k) + "\t");
-        }
-        return new String[] {sb.toString().trim(),sb2.toString().trim()};
+        return outdegreeMap;
     }
+
+    public void getHistDataForTopic() throws IOException {
+        List<String> timeList = getTimeList();
+        BufferedWriter out=new BufferedWriter(new FileWriter("hist.txt"));
+        Date startTime = Tools.strToDate(timeList.get(0),"yyyy-MM-dd HH");
+        while(!timeList.isEmpty()) {
+            String current = timeList.remove(0);
+            String endTime = current + ":59:59";
+            ExecutionEngine engine = new ExecutionEngine(db.graphDb);
+            ExecutionResult result;
+            String line = "";
+            String statement =
+                    "match (n)-[r]->(m) where r.time <= \"" + endTime + "\" with distinct n return n as t ";
+            try (Transaction tx = db.graphDb.beginTx()) {
+                result = engine.execute(statement);
+                Iterator<Node> n_column = result.columnAs("t");
+
+                while(n_column.hasNext()) {
+                    Node node = n_column.next();
+                    int outdegree = 0;
+                    for(Relationship rel:node.getRelationships(Direction.OUTGOING)){
+                        if(rel.getProperty("time").toString().compareTo(endTime)<=0){
+                            outdegree++;
+                        }
+                    }
+                    line += outdegree + "\t";
+                }
+            }
+            out.write(line+"\n");
+        }
+        out.close();
+    }
+
     public static void main(String[] args) throws IOException {
         Analysis test = new Analysis();
         test.db.createDb();
 //        test.outputTimeSeriesDataForTopic();
 //        test.outputDegreeDataFortopic();
         test.DegreeDistributionOnTimeSeries(1);
+        test.getHistDataForTopic();
         test.db.shutDown();
     }
 }

@@ -14,7 +14,7 @@ import org.neo4j.kernel.impl.util.FileUtils;
  * Created by zzzzddddgtuwup on 2/14/15.
  */
 public class EmbeddedNeo4j {
-    private static final String DB_PATH = "neo4j-topic4-db";
+    private static final String DB_PATH = "neo4j-topic8-db";
     GraphDatabaseService graphDb;
     public static enum RelTypes implements RelationshipType {
         REPOST
