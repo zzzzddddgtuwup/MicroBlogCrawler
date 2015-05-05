@@ -34,14 +34,6 @@ public class sinaTopic {
     private static String topic = "#15岁女孩狂整容#";
 
     public void testOnTopic() throws IOException, ParseException, InterruptedException {
-//        System.out.println("开始搜索微博");
-//        String url = "http://s.weibo.com/wb/" + URLEncoder.encode("#你女朋友掉色了#","utf-8") + "&xsort=time&timescope=custom:2015-03-23-02:2015-03-23-02&nodup=1";
-//        String url = "http://s.weibo.com/wb/" + URLEncoder.encode("#2015重庆国际马拉松#","utf-8") + "&xsort=time&nodup=1";
-//        String n_url = url + "&page=1";
-//        String res = HtmlUtils.HTMLGet(n_url, HtmlUtils.getCookie());
-//        System.out.println(getHtmlFromJs(res));
-
-//        testAvailability("#李光耀去世#", "2015-03-23-18", "2015-03-24-02");
         db.cleanDb();
         db.createDb();
         searchTopic("2015-04-11-00", "2015-04-15-00");
