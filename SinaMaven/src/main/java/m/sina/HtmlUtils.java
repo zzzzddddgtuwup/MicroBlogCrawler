@@ -9,11 +9,11 @@ import java.util.*;
 
 /**
  * Created by zzzzddddgtuwup on 3/4/15.
+ * HTTP help methods
  */
 public class HtmlUtils {
-//    private static final String USER_NAME = "derekzhang4484@gmail.com";
-//    private static final String PASS_WORD = "zzzzddddgggg1234";
 
+    //all zombie accounts
     private static final Map<String,String> accounts= new HashMap<String,String>(){
         {
 //            put("derekzhang4484@gmail.com","zzzzddddgggg1234");
@@ -131,6 +131,7 @@ public class HtmlUtils {
         return res;
     }
 
+    //Http get with cookies
     public static String HTMLGet(String url, String cookies) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
@@ -153,6 +154,7 @@ public class HtmlUtils {
         return response.toString();
     }
 
+    //Http get without cookies
     public static String HTMLGet(String url) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
@@ -237,7 +239,7 @@ public class HtmlUtils {
         return generateRandomString(array);
     }
 
-
+    //if cookie is outdate, use this to generate new cookie file
     public static void main(String[] args) throws IOException {
         generateCookieFile();
     }

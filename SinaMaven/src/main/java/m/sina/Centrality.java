@@ -44,10 +44,6 @@ public class Centrality {
         }
     }
 
-//    private SingleSourceShortestPath<Integer> getSingleSourceShortestPath() {
-//        return new SingleSourceShortestPathBFS(null,Direction.OUTGOING,EmbeddedNeo4j.RelTypes.REPOST);
-//    }
-
     private Traverser BFSTraverse(final Node user){
         try ( Transaction tx = db.graphDb.beginTx() ) {
             TraversalDescription td = db.graphDb.traversalDescription()

@@ -42,6 +42,7 @@ public class sinaTopic {
         db.shutDown();
     }
 
+    //test if the search result exceed the limitation
     public void testAvailability(String startTime, String endTime) throws IOException, ParseException, InterruptedException {
         List<String> l = Tools.getTimeSeries(startTime, endTime);
         for (String time : l) {
@@ -70,7 +71,7 @@ public class sinaTopic {
                 System.err.println("get all original weibo");
                 String ori_url = url + "&scope=ori";
                 GetAllPages(ori_url, true);
-                //get all repost weibo
+                //get all weibo then
                 GetAllPages(url, false);
             } else {
                 GetAllPages(url, true);
@@ -114,6 +115,7 @@ public class sinaTopic {
         }
     }
 
+    //use jsoup to decode info from html
     private void decodeHtml(String html, boolean deepOnOriginalWeibo) throws IOException, InterruptedException {
         //System.out.println(html);
         Document doc = Jsoup.parse(html);
@@ -234,7 +236,7 @@ public class sinaTopic {
             }
         }
         if (i == l.size()) {
-            //repost from self and the original tweet does not has hashtag
+            //repost from self and the original tweet does not has tag
             if (ori_name.equals(screen_name)) {
                 if (current == null) {
                     System.out.println("create current_User");

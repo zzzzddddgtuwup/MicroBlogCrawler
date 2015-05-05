@@ -12,8 +12,11 @@ import org.neo4j.kernel.impl.util.FileUtils;
 
 /**
  * Created by zzzzddddgtuwup on 2/14/15.
+ * This class is for neo4j database operation
  */
+
 public class EmbeddedNeo4j {
+    //database path
     private static final String DB_PATH = "neo4j-topic8-db";
     GraphDatabaseService graphDb;
     public static enum RelTypes implements RelationshipType {
@@ -166,6 +169,7 @@ public class EmbeddedNeo4j {
         });
     }
 
+    //return all nodes has link with them(indegree or outdegree)
     public List<Node> getAllNodes(){
         List<Node> list = new ArrayList<>();
         ExecutionEngine engine = new ExecutionEngine(graphDb);
